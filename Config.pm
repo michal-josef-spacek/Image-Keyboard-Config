@@ -29,8 +29,9 @@ sub new {
 	$self->{'f_size'} = 20;
 
 	# Button content.
+	$self->{'b_conf_align_horz'} = 'center';
+	$self->{'b_conf_align_vert'} = 'middle';
 	$self->{'b_cont_text'} = 'Foo';
-	$self->{'b_conf_align'} = 'center';
 
 	# Button box size.
 	$self->{'b_box_height'} = 100;
@@ -58,10 +59,17 @@ sub new {
 	return $self;
 }
 
-# Align.
-sub align {
+# Horizontal align.
+sub align_horz {
 	my ($self, $align) = @_;
-	$self->{'b_cont_align'} = $align;
+	$self->{'b_cont_align_horz'} = $align;
+	return $self;
+}
+
+# Vertical align.
+sub align_vert {
+	my ($self, $align) = @_;
+	$self->{'b_cont_vert'} = $align;
 	return $self;
 }
 
@@ -81,7 +89,10 @@ sub draw {
 			'top' => $self->{'b_pos_top'},
 		},
 		'text' => {
-			'align' => $self->{'b_cont_align'},
+			'align' => {
+				'horz' => $self->{'b_cont_align_horz'},
+				'vert' => $self->{'b_cont_align_vert'},
+			},
 			'string' => $self->{'b_cont_text'},
 		},
 	};
