@@ -46,6 +46,11 @@ sub new {
 	# Process params.
 	set_params($self, @params);
 
+	# Set backgroung file.
+	if (defined $self->{'backgroung_file'}) {
+		$self->{'config'}->{'background'} = $self->{'background_file'};
+	}
+
 	# Button index.
 	$self->{'button_index'} = 0;
 
@@ -63,7 +68,6 @@ sub align {
 # Draw button.
 sub draw {
 	my $self = shift;
-	$self->{'config'}->{'background'} = $self->{'background_file'};
 	$self->{'button_index'}++;
 	$self->{'config'}->{'button'}->{$self->{'button_index'}} = {
 		'font' => {
