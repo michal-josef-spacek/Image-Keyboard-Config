@@ -33,6 +33,12 @@ sub new {
 	$self->{'b_conf_align_vert'} = 'middle';
 	$self->{'b_cont_text'} = 'Foo';
 
+	# Button padding.
+	$self->{'b_padd_bottom'} = 0;
+	$self->{'b_padd_left'} = 0;
+	$self->{'b_padd_right'} = 0;
+	$self->{'b_padd_top'} = 0;
+
 	# Button box size.
 	$self->{'b_box_height'} = 100;
 	$self->{'b_box_width'} = 100;
@@ -93,6 +99,12 @@ sub draw {
 				'horz' => $self->{'b_cont_align_horz'},
 				'vert' => $self->{'b_cont_align_vert'},
 			},
+			'padding' => {
+				'bottom' => $self->{'b_padd_bottom'},
+				'left' => $self->{'b_padd_left'},
+				'right' => $self->{'b_padd_right'},
+				'top' => $self->{'b_padd_top'},
+			},
 			'string' => $self->{'b_cont_text'},
 		},
 	};
@@ -140,6 +152,16 @@ sub move {
 	my ($self, $x, $y) = @_;
 	$self->{'b_pos_top'} += $y;
 	$self->{'b_pos_left'} += $x;
+	return $self;
+}
+
+# Padding.
+sub padding {
+	my ($self, $top, $right, $bottom, $left) = @_;
+	$self->{'b_padd_bottom'} = $bottom;
+	$self->{'b_padd_left'} = $left;
+	$self->{'b_padd_right'} = $right;
+	$self->{'b_padd_top'} = $top;
 	return $self;
 }
 
