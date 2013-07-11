@@ -54,7 +54,7 @@ sub new {
 	set_params($self, @params);
 
 	# Set backgroung file.
-	if (defined $self->{'backgroung_file'}) {
+	if (defined $self->{'background_file'}) {
 		$self->{'config'}->{'background'} = $self->{'background_file'};
 	}
 
