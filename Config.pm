@@ -30,6 +30,7 @@ sub new {
 
 	# Button content.
 	$self->{'b_cont_text'} = 'Foo';
+	$self->{'b_conf_align'} = 'center';
 
 	# Button box size.
 	$self->{'b_box_height'} = 100;
@@ -52,6 +53,13 @@ sub new {
 	return $self;
 }
 
+# Align.
+sub align {
+	my ($self, $align) = @_;
+	$self->{'b_cont_align'} = $align;
+	return $self;
+}
+
 # Draw button.
 sub draw {
 	my $self = shift;
@@ -69,6 +77,7 @@ sub draw {
 			'top' => $self->{'b_pos_top'},
 		},
 		'text' => {
+			'align' => $self->{'b_cont_align'},
 			'string' => $self->{'b_cont_text'},
 		},
 	};
