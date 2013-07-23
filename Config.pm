@@ -29,8 +29,8 @@ sub new {
 	$self->{'f_size'} = 20;
 
 	# Button content.
-	$self->{'b_conf_align_horz'} = 'center';
-	$self->{'b_conf_align_vert'} = 'middle';
+	$self->{'b_cont_align_horz'} = 'center';
+	$self->{'b_cont_align_vert'} = 'middle';
 	$self->{'b_cont_text'} = 'Foo';
 
 	# Button padding.
