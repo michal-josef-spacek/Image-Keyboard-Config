@@ -187,3 +187,226 @@ sub width {
 }
 
 1;
+
+__END__
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+Image::Keyboard::Config - Perl class for image keyboard configuration creating.
+
+=head1 SYNOPSIS
+
+ use Image::Keyboard::Config;
+ my $obj = Image::Keyboard->new(%parameters);
+ my $obj = $obj->align_horz($align);
+ my $obj = $obj->align_vert($align);
+ my $obj = $obj->draw;
+ my $obj = $obj->font($color, $file, $size);
+ my $conf_hr = $obj->get;
+ my $obj = $obj->height($height);
+ my $obj = $obj->image($image);
+ my $obj = $obj->left($left);
+ my $obj = $obj->move($x, $y);
+ my $obj = $obj->padding($top, $right, $bottom, $left);
+ my $obj = $obj->text($text);
+ my $obj = $obj->top($top);
+ my $obj = $obj->width($width);
+
+=head1 METHODS
+
+=over 8
+
+=item C<new(%parameters)>
+
+Constructor.
+
+=over 8
+
+=item * C<background_file>
+
+ Background file.
+ Default values is undef.
+
+=item * C<config>
+
+ Configuration structure.
+ Default value is {}.
+
+=item * C<f_color>
+
+ Font color.
+ Default value is 'black'.
+
+=item * C<f_file>
+
+ Font file.
+ Default value is undef.
+
+=item * C<f_size>
+
+ Font size.
+ Default value is 20.
+
+=item * C<b_cont_align_horz>
+
+ Button content horizontal align.
+ Default value is 'center'.
+
+=item * C<b_cont_align_vert>
+
+ Button content vertical align.
+ Default value is 'middle'.
+
+=item * C<b_cont_text>
+
+ Button content text.
+ Default value is 'Foo'.
+
+=item * C<b_padd_bottom>
+
+ Button bottom padding.
+ Default value is 0.
+
+=item * C<b_padd_left>
+
+ Button left padding.
+ Default value is 0.
+
+=item * C<b_padd_right>
+
+ Button right padding.
+ Default value is 0.
+
+=item * C<b_padd_top>
+
+ Button top padding.
+ Default value is 0.
+
+=item * C<b_box_height>
+
+ Button box height size.
+ Default value is 100.
+
+=item * C<b_box_width>
+
+ Button box width size.
+ Default value is 100.
+
+=item * C<b_image>
+
+ Buttom image.
+ Default value is undef.
+
+=item * C<b_pos_left>
+
+ Button left position.
+ Default value is 0.
+
+=item * C<b_pos_top>
+
+ Button top_position.
+ Default value is 0.
+
+=back
+
+=item C<align_horz($align)>
+
+ TODO
+
+=item C<align_vert($align)>
+
+ TODO
+
+=item C<draw()>
+
+ TODO
+
+=item C<font($color, $file, $size)>
+
+ TODO
+
+=item C<get()>
+
+ TODO
+
+=item C<height($height)>
+
+ TODO
+
+=item C<image($image)>
+
+ TODO
+
+=item C<left($left)>
+
+ TODO
+
+=item C<move($x, $y)>
+
+ TODO
+
+=item C<padding($top, $right, $bottom, $left)>
+
+ TODO
+
+=item C<text($text)>
+
+ TODO
+
+=item C<top($top)>
+
+ TODO
+
+=item C<width($width)>
+
+ TODO
+
+=back
+
+=head1 ERRORS
+
+ new():
+         From Class::Utils::set_params():
+                 Unknown parameter '%s'.
+
+=head1 EXAMPLE
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use Image::Keyboard::Config;
+
+ # TODO
+
+=head1 DEPENDENCIES
+
+
+=head1 SEE ALSO
+
+L<Image::Keyboard>.
+
+=head1 REPOSITORY
+
+L<https://github.com/tupinek/Image-Keyboard-Config>
+
+=head1 AUTHOR
+
+Michal Špaček L<mailto:skim@cpan.org>
+
+L<http://skim.cz>
+
+=head1 LICENSE AND COPYRIGHT
+
+BSD license.
+
+=head1 VERSION
+
+0.01
+
+=cut
