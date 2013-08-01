@@ -114,9 +114,15 @@ sub draw {
 # Font.
 sub font {
 	my ($self, $color, $file, $size) = @_;
-	$self->{'font_color'} = $color;
-	$self->{'font_file'} = $file;
-	$self->{'font_size'} = $size;
+	if (defined $color) {
+		$self->{'f_color'} = $color;
+	}
+	if (defined $file) {
+		$self->{'f_file'} = $file;
+	}
+	if (defined $size) {
+		$self->{'f_size'} = $size;
+	}
 	return $self;
 }
 
