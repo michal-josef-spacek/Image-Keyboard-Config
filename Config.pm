@@ -111,7 +111,7 @@ sub draw {
 	return $self;
 }
 
-# Font.
+# Set font properties.
 sub font {
 	my ($self, $color, $file, $size) = @_;
 	if (defined $color) {
@@ -321,55 +321,85 @@ Constructor.
 
 =item C<align_horz($align)>
 
- TODO
+ Horizontal align.
+ Set $align to 'b_cont_align_horz' parameter.
+ Returns object.
 
 =item C<align_vert($align)>
 
- TODO
+ Vertical align.
+ Set $align to 'b_cont_vert' parameter.
+ Returns object.
 
 =item C<draw()>
 
- TODO
+ Draw button.
+ Returns object.
 
 =item C<font($color, $file, $size)>
 
- TODO
+ Set font properties.
+ Set $color to 'f_color' parameter.
+ Set $file to 'f_file' parameter.
+ Set $size to 'f_size' parameter.
+ Returns object.
 
 =item C<get()>
 
- TODO
+ Get configuration structure.
+ Returns reference to hash with keyboard configuration.
 
 =item C<height($height)>
 
- TODO
+ Height.
+ Set $height to 'b_box_height' parameter.
+ Returns object.
 
 =item C<image($image)>
 
- TODO
+ Image.
+ Set $image to 'b_image' parameter.
+ Returns object.
 
 =item C<left($left)>
 
- TODO
+ Left.
+ Set $left to 'b_pos_left' parameter.
+ Returns object.
 
 =item C<move($x, $y)>
 
- TODO
+ Move to x, y coords.
+ Add $x to 'b_pos_top' parameter.
+ Add $y to 'b_pos_left' parameter.
+ Returns object.
 
 =item C<padding($top, $right, $bottom, $left)>
 
- TODO
+ Padding.
+ Set $top to 'b_padd_top' parameter.
+ Set $right to 'b_padd_right' parameter.
+ Set $bottom to 'b_padd_bottom' parameter.
+ Set $left to 'b_padd_left' parameter.
+ Returns object.
 
 =item C<text($text)>
 
- TODO
+ Text.
+ Set $text to 'b_cont_text' parameter.
+ Returns object.
 
 =item C<top($top)>
 
- TODO
+ Top.
+ Set $top to 'b_pos_top' parameter.
+ Returns object.
 
 =item C<width($width)>
 
- TODO
+ Width.
+ Set $width to 'b_box_width' parameter.
+ Returns object.
 
 =back
 
@@ -392,6 +422,7 @@ Constructor.
 
 =head1 DEPENDENCIES
 
+L<Class::Utils>.
 
 =head1 SEE ALSO
 
