@@ -1,4 +1,5 @@
 0.02
+ - Add README file.
  - Improve doc.
  - Rewrite Changes file to CPAN::Changes::SPEC format.
  - Update Module::Install to 1.08 version.

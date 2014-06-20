@@ -10,6 +10,7 @@ abstract 'Perl class for image keyboard configuration creating.';
 author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'Image-Keyboard-Config';
+readme_from 'Config.pm';
 requires 'Class::Utils' => 0.03;
 resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
 	'?Name=Image-Keyboard-Config';

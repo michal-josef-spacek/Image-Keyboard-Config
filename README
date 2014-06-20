@@ -1,0 +1,214 @@
+NAME
+    Image::Keyboard::Config - Perl class for image keyboard configuration
+    creating.
+
+SYNOPSIS
+     use Image::Keyboard::Config;
+     my $obj = Image::Keyboard->new(%parameters);
+     my $obj = $obj->align_horz($align);
+     my $obj = $obj->align_vert($align);
+     my $obj = $obj->draw;
+     my $obj = $obj->font($color, $file, $size);
+     my $conf_hr = $obj->get;
+     my $obj = $obj->height($height);
+     my $obj = $obj->image($image);
+     my $obj = $obj->left($left);
+     my $obj = $obj->move($x, $y);
+     my $obj = $obj->padding($top, $right, $bottom, $left);
+     my $obj = $obj->text($text);
+     my $obj = $obj->top($top);
+     my $obj = $obj->width($width);
+
+METHODS
+    "new(%parameters)"
+            Constructor.
+
+            *       "background_file"
+
+                     Background file.
+                     Default values is undef.
+
+            *       "config"
+
+                     Configuration structure.
+                     Default value is {}.
+
+            *       "f_color"
+
+                     Font color.
+                     Default value is 'black'.
+
+            *       "f_file"
+
+                     Font file.
+                     Default value is undef.
+
+            *       "f_size"
+
+                     Font size.
+                     Default value is 20.
+
+            *       "b_cont_align_horz"
+
+                     Button content horizontal align.
+                     Default value is 'center'.
+
+            *       "b_cont_align_vert"
+
+                     Button content vertical align.
+                     Default value is 'middle'.
+
+            *       "b_cont_text"
+
+                     Button content text.
+                     Default value is 'Foo'.
+
+            *       "b_padd_bottom"
+
+                     Button bottom padding.
+                     Default value is 0.
+
+            *       "b_padd_left"
+
+                     Button left padding.
+                     Default value is 0.
+
+            *       "b_padd_right"
+
+                     Button right padding.
+                     Default value is 0.
+
+            *       "b_padd_top"
+
+                     Button top padding.
+                     Default value is 0.
+
+            *       "b_box_height"
+
+                     Button box height size.
+                     Default value is 100.
+
+            *       "b_box_width"
+
+                     Button box width size.
+                     Default value is 100.
+
+            *       "b_image"
+
+                     Buttom image.
+                     Default value is undef.
+
+            *       "b_pos_left"
+
+                     Button left position.
+                     Default value is 0.
+
+            *       "b_pos_top"
+
+                     Button top_position.
+                     Default value is 0.
+
+    "align_horz($align)"
+             Horizontal align.
+             Set $align to 'b_cont_align_horz' parameter.
+             Returns object.
+
+    "align_vert($align)"
+             Vertical align.
+             Set $align to 'b_cont_vert' parameter.
+             Returns object.
+
+    "draw()"
+             Draw button.
+             Returns object.
+
+    "font($color, $file, $size)"
+             Set font properties.
+             Set $color to 'f_color' parameter.
+             Set $file to 'f_file' parameter.
+             Set $size to 'f_size' parameter.
+             Returns object.
+
+    "get()"
+             Get configuration structure.
+             Returns reference to hash with keyboard configuration.
+
+    "height($height)"
+             Height.
+             Set $height to 'b_box_height' parameter.
+             Returns object.
+
+    "image($image)"
+             Image.
+             Set $image to 'b_image' parameter.
+             Returns object.
+
+    "left($left)"
+             Left.
+             Set $left to 'b_pos_left' parameter.
+             Returns object.
+
+    "move($x, $y)"
+             Move to x, y coords.
+             Add $x to 'b_pos_top' parameter.
+             Add $y to 'b_pos_left' parameter.
+             Returns object.
+
+    "padding($top, $right, $bottom, $left)"
+             Padding.
+             Set $top to 'b_padd_top' parameter.
+             Set $right to 'b_padd_right' parameter.
+             Set $bottom to 'b_padd_bottom' parameter.
+             Set $left to 'b_padd_left' parameter.
+             Returns object.
+
+    "text($text)"
+             Text.
+             Set $text to 'b_cont_text' parameter.
+             Returns object.
+
+    "top($top)"
+             Top.
+             Set $top to 'b_pos_top' parameter.
+             Returns object.
+
+    "width($width)"
+             Width.
+             Set $width to 'b_box_width' parameter.
+             Returns object.
+
+ERRORS
+     new():
+             From Class::Utils::set_params():
+                     Unknown parameter '%s'.
+
+EXAMPLE
+     # Pragmas.
+     use strict;
+     use warnings;
+
+     # Modules.
+     use Image::Keyboard::Config;
+
+     # TODO
+
+DEPENDENCIES
+    Class::Utils.
+
+SEE ALSO
+    Image::Keyboard.
+
+REPOSITORY
+    <https://github.com/tupinek/Image-Keyboard-Config>
+
+AUTHOR
+    Michal Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    BSD license.
+
+VERSION
+    0.02
+
